@@ -1,1 +1,1 @@
-export { getDeriverById, createDeriver } from './deriver';
+export { deriverController } from './deriver';

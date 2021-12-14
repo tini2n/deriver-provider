@@ -1,5 +1,4 @@
 require('dotenv').config();
-import 'reflect-metadata';
 
 import express from 'express';
 import parser from 'body-parser';

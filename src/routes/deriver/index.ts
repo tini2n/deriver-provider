@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { deriverController } from '@controllers/deriver';
+import { deriverController } from '@controllers';
 
 const router = Router();
 

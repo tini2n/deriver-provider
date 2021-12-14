@@ -31,27 +31,31 @@
     "rootDir": "./src" /* Specify the root folder within your source files. */,
     "outDir": "./build" /* Specify an output folder for all emitted files. */,
     "paths": {
-      "@common*": [
-        "./src/common/"
+      "@common": [
+        "./src/common/*"
       ],
-      "@controllers*": [
-        "./src/controllers*"
+      "@controllers": [
+        "./src/controllers/"
       ],
       "@models": [
-        "./src/models"
+        "./src/models/"
       ],
-      "@routes*": [
-        "./src/routes*"
+      "@routes": [
+        "./src/routes/*"
       ],
       "@services": [
-        "./src/services"
+        "./src/services/"
       ],
+      "*": [
+        "src/typings/*"
+      ]
     }, /* Specify a set of entries that re-map imports to additional lookup locations. */
     "rootDirs": [], /* Allow multiple folders to be treated as one when resolving modules. */
-    // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
+    "typeRoots": [
+      "src/typings/"
+    ], /* Specify multiple folders that act like `./node_modules/@types`. */
     "types": [
-      "node",
-      "reflect-metadata"
+      "node"
     ], /* Specify type package names to be included without being referenced in a source file. */
     // "allowUmdGlobalAccess": true, /* Allow accessing UMD globals from modules. */
     "resolveJsonModule": true /* Enable importing .json files */,
@@ -113,13 +117,14 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "files": [
-    "./src/index.ts",
-    "./src/index.d.ts",
+    "src/index.ts",
+    "src/typings/global/index.d.ts",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src/typings"
   ],
   "include": [
-    "src/**/*.ts"
+    "src/**/*"
   ]
 }
